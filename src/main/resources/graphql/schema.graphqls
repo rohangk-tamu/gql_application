@@ -1,0 +1,20 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type CartItem {
+    id: ID!
+    productName: String
+    productQuantity: Int
+    productPrice: Float
+}
+
+type Query {
+    findAll: [CartItem]
+}
+
+type Mutation {
+    createCartItem(productName: String!, productQuantity: Int!, productPrice: Float!): CartItem!
+}
+
